@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Futuro da Comunicação</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins for body, Orbitron for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados e tema disruptivo */
+        :root {
+            --color-primary: #9333ea; /* Roxo vibrante */
+            --color-secondary: #ec4899; /* Rosa */
+            --color-bg: #0c0a09; /* Fundo quase preto */
+            --color-text: #e7e5e4; /* Texto off-white */
+            --color-glass: rgba(23, 23, 23, 0.5); /* Cor do vidro */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            background-image: radial-gradient(circle at 1% 1%, var(--color-primary), transparent 25%),
+                              radial-gradient(circle at 99% 99%, var(--color-secondary), transparent 25%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 15px var(--color-primary), 0 0 25px var(--color-primary);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: var(--color-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border: 1px solid var(--color-primary);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+        }
+
+        .glow-button {
+            background: var(--color-primary);
+            border-radius: 9999px;
+            padding: 0.75rem 2rem;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px var(--color-primary), 0 0 30px var(--color-primary);
+            transition: all 0.3s ease;
+        }
+
+        .glow-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--color-primary), 0 0 45px var(--color-primary);
+        }
+
+        /* Animações de Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Seção Hero -->
+    <header class="min-h-screen flex flex-col items-center justify-center text-center p-4">
+        <div class="reveal">
+            <h1 class="text-5xl md:text-8xl font-black uppercase tracking-widest mb-4">
+                <span class="gradient-text">Rompendo</span> a Comunicação
+            </h1>
+            <p class="text-lg md:text-xl text-stone-400 max-w-3xl mx-auto font-light">
+                A comunicação como conhecemos está se desintegrando para dar lugar a algo novo. O que nos aguarda na próxima fronteira da interação?
+            </p>
+        </div>
+    </header>
+
+    <!-- Seção de Introdução -->
+    <section class="container mx-auto px-6 py-20">
+        <div class="text-center max-w-4xl mx-auto reveal">
+            <h2 class="text-4xl font-bold mb-6">A Evolução é Inevitável</h2>
+            <p class="text-lg text-stone-300">
+                Apresentações são apenas o começo. São catalisadores de ideias, plataformas para convencer e ensinar. Mas o futuro exige mais do que slides e discursos. Exige imersão, inteligência e novas realidades.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção de Previsões -->
+    <main class="container mx-auto px-6 py-20 space-y-24">
+        
+        <!-- Feature 1: Presença Virtual -->
+        <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+            <div class="text-left">
+                <h3 class="text-3xl font-bold mb-4">Presença Virtual e Holográfica</h3>
+                <p class="text-stone-400 text-lg">
+                    Esqueça as videochamadas. O futuro do trabalho e da interação social é holográfico. Avatares 3D e projeções imersivas irão eliminar as barreiras geográficas, criando uma sensação de presença real que transcende o espaço físico e digital.
+                </p>
+            </div>
+            <div class="glass-card p-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-purple-400" fill="none" viewBox="0 0 200 100">
+                    <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M50 80 Q100 20 150 80" filter="url(#glow)"></path>
+                    <path stroke="currentColor" stroke-width="1" stroke-dasharray="4" opacity="0.5" d="M20 50 L180 50"></path>
+                    <circle cx="100" cy="50" r="20" stroke="currentColor" stroke-width="1.5" fill="rgba(147,51,234,0.1)"></circle>
+                    <defs><filter id="glow"><feGaussianBlur stdDeviation="3.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Feature 2: Chatbots -->
+        <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+            <div class="glass-card p-8 md:order-last">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-pink-400" fill="none" viewBox="0 0 200 100">
+                    <path d="M 30 70 C 40 30, 70 30, 80 70 S 110 30, 120 70 S 150 30, 160 70" stroke="currentColor" stroke-width="2" fill="none" filter="url(#glow2)"></path>
+                    <path d="M 35 75 L 165 75" stroke="currentColor" stroke-width="1" opacity="0.3"></path>
+                    <defs><filter id="glow2"><feGaussianBlur stdDeviation="3.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs>
+                </svg>
+            </div>
+            <div class="text-left">
+                <h3 class="text-3xl font-bold mb-4">Inteligência Artificial Conversacional</h3>
+                <p class="text-stone-400 text-lg">
+                   Os chatbots estão evoluindo para assistentes sencientes. A automação através de machine learning não será apenas sobre respostas pré-definidas, mas sobre compreensão contextual, antecipação de necessidades e conversas verdadeiramente fluidas e humanas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 3: Realidade Aumentada -->
+        <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+            <div class="text-left">
+                <h3 class="text-3xl font-bold mb-4">Realidade Aumentada Ubíqua</h3>
+                <p class="text-stone-400 text-lg">
+                    A camada digital sobreposta ao nosso mundo se tornará invisível e onipresente. Da cirurgia médica assistida por RA à educação interativa e turismo imersivo, a forma como percebemos e interagimos com a realidade será permanentemente alterada.
+                </p>
+            </div>
+            <div class="glass-card p-8">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto text-purple-400" fill="none" viewBox="0 0 200 100">
+                    <rect x="50" y="25" width="100" height="50" rx="10" stroke="currentColor" stroke-width="1.5" fill="rgba(147,51,234,0.1)"></rect>
+                    <circle cx="100" cy="50" r="15" stroke="currentColor" stroke-width="2" fill="none" filter="url(#glow)"></circle>
+                    <path d="M70 50 L130 50 M100 25 L100 75" stroke="currentColor" stroke-width="1" opacity="0.5"></path>
+                 </svg>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Seção de Footer -->
+    <footer class="text-center p-10 mt-20">
+        <div class="reveal">
+            <h2 class="text-4xl font-bold mb-6">Você está pronto?</h2>
+            <button class="glow-button">Inicie a Transição</button>
+        </div>
+        <p class="text-stone-600 mt-20 text-sm">Design disruptivo inspirado na apresentação "O futuro da comunicação".</p>
+    </footer>
+
+    <script>
+        // Lógica para revelar elementos no scroll
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Opcional: para de observar depois que o elemento é revelado
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 // Revela quando 10% do elemento está visível
+        });
+
+        revealElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
